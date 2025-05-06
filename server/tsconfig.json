@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es6", // Or a higher ECMAScript version
+    "module": "commonjs", // Or "esnext" if using ES modules
+    "outDir": "./dist", // Output directory for compiled JavaScript
+    "strict": true, // Enable strict type-checking options
+    "esModuleInterop": true, // Allow default imports from modules with no default export
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true // Ensure consistent usage of file casing
+  }
+}

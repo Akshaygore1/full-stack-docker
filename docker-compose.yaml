@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  client:
+    build: ./client
+    # We map the Vite dev server port
+    ports:
+      - "5173:80"
+    volumes:
+      # Keep the volume mount so changes are reflected inside the container
+      - ./client:/app
+    # Optional: Add a hostname for easier access
+    # hostname: client
+
+  server:
+    build: ./server
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./server:/app
+    # Optional: Uncomment if your server needs to be ready before the client
+    # depends_on:
+    #   - server # Depending on the server in the client service
